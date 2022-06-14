@@ -1,7 +1,6 @@
-project: rnshah9/ngs
+project: ngs
 target: ngs
-tests: null
 
 cmds:
-  - cmd: /usr/local/bin/ngs @@
+  - cmd: /usr/local/bin/ngs /test.ngs
     filepath: /test.ngs
