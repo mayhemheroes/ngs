@@ -2,5 +2,4 @@ project: ngs
 target: ngs
 
 cmds:
-  - cmd: /usr/local/bin/ngs /test.ngs
-    filepath: /test.ngs
+  - cmd: /ngs @@
