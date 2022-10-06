@@ -46,6 +46,7 @@ jobs:
         run: |
           pacman -Sy --noconfirm man-db wget curl ${{ matrix.compiler }}
           pacman -Syu --noconfirm
+
           if [ "${{ matrix.compiler }}" = "gcc" ]; then
             echo "CC=gcc" >> $GITHUB_ENV
             echo "CXX=g++" >> $GITHUB_ENV
@@ -232,6 +233,7 @@ jobs:
           install: |
             apt-get update
             apt-get install -y man sudo g++-${{ matrix.version }}
+
           # Set an output parameter `uname` for use in subsequent steps
           run: |
             cd /ngs && ./install.sh && make tests test-installation
