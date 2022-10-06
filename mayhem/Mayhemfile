@@ -1,0 +1,5 @@
+project: ngs
+target: ngs
+
+cmds:
+  - cmd: /ngs @@

@@ -1,5 +1,5 @@
 # build image
-FROM debian:bullseye
+FROM debian:stretch
 RUN apt-get update
 RUN apt-get install -y sudo
 ADD . /src
@@ -9,9 +9,9 @@ CMD ["/bin/bash"]
 
 
 # release image
-FROM debian:bullseye
+FROM debian:stretch
 RUN apt-get update 
-RUN apt-get install -y libgc1 libffi7 libjson-c5
+RUN apt-get install -y libgc1c2 libffi6 libjson-c3
 
 WORKDIR /root/
 COPY --from=0 /usr/local/lib/ngs /usr/local/lib/ngs
